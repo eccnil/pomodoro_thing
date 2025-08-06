@@ -121,11 +121,28 @@ void digitTo7Segment(uint8_t digit, bool includeDot, bool segmentArray[8]) {
   segmentArray[7] = includeDot;
 }
 
+int num = 0;
+bool buttonPressed = false;
+int pinButton = 0;
+
+void checkForButtonPress() {
+  auto read = digitalRead(pinButton);
+  if (read == LOW && !buttonPressed) {
+    buttonPressed = true; // Button is pressed
+    num++;
+    // delay(200); // Debounce delay
+  } else if (read == HIGH) {
+    buttonPressed = false; // Button is released
+  }
+}
+
 void setup() {
   pinMode(SER, OUTPUT);
   pinMode(RCLK, OUTPUT);
   pinMode(MR, OUTPUT);
   pinMode(LATCH, OUTPUT);
+
+  pinMode(pinButton, INPUT_PULLUP); // Button pin
 
   // inicio
   digitalWrite(SER, LOW);
@@ -151,13 +168,14 @@ void loop() {
   // delay(1000); // Wait for 1000 millisecond(s)
 
   // escribir digito
-  digitTo7Segment(3, false, dato);
+  digitTo7Segment(7, false, dato);
   display_digit(3, dato);
 
   // delay(1000); // Wait for 1000 millisecond(s)
   // escribir digito
-  digitTo7Segment(1, false, dato);
+  digitTo7Segment(num, false, dato);
   display_digit(4, dato);
 
   // delay(1000); // Wait for 1000 millisecond(s)
+  checkForButtonPress();
 }

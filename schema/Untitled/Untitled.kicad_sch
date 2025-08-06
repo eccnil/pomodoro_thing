@@ -2478,6 +2478,16 @@
 	)
 	(wire
 		(pts
+			(xy 71.12 95.25) (xy 90.17 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c82e6c1-e4d1-4228-98a1-9e5dc2f35d48")
+	)
+	(wire
+		(pts
 			(xy 99.06 134.62) (xy 99.06 87.63)
 		)
 		(stroke
@@ -2588,6 +2598,16 @@
 	)
 	(wire
 		(pts
+			(xy 90.17 124.46) (xy 78.74 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8132923-9d76-49b5-a4b7-492bb7090131")
+	)
+	(wire
+		(pts
 			(xy 71.12 82.55) (xy 80.01 82.55)
 		)
 		(stroke
@@ -2675,6 +2695,16 @@
 			(type default)
 		)
 		(uuid "eb1f4b42-99d4-4783-91e4-3bb5d156c44a")
+	)
+	(wire
+		(pts
+			(xy 90.17 95.25) (xy 90.17 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed92905c-02a9-4177-837d-0a5d49d0c254")
 	)
 	(wire
 		(pts
@@ -3155,7 +3185,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "68c30465-550d-419a-a1a6-32f5275a4e9f")
+			(uuid "68c30465-550d-419a-a1a6-32f5275a4ea0")
 		)
 		(instances
 			(project ""
@@ -3558,7 +3588,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "9fca82bf-481b-40ab-8000-1d25d5880391")
+			(uuid "9fca82bf-481b-40ab-8000-1d25d5880392")
 		)
 		(instances
 			(project ""
@@ -3571,7 +3601,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 86.36 135.89 0)
+		(at 73.66 124.46 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3580,7 +3610,7 @@
 		(fields_autoplaced yes)
 		(uuid "84f1a60d-052e-4627-90ce-e87c7b820f98")
 		(property "Reference" "SW1"
-			(at 86.36 128.27 0)
+			(at 73.66 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3588,7 +3618,7 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 86.36 130.81 0)
+			(at 73.66 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3596,7 +3626,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 130.81 0)
+			(at 73.66 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3605,7 +3635,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 86.36 130.81 0)
+			(at 73.66 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3614,7 +3644,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 86.36 135.89 0)
+			(at 73.66 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3755,10 +3785,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "08c3ad03-bf07-4212-9a10-db1b784a652e")
+			(uuid "08c3ad03-bf07-4212-9a10-db1b784a652f")
 		)
 		(pin "2"
-			(uuid "67181f33-c2e2-4850-9568-5c68b7e40133")
+			(uuid "67181f33-c2e2-4850-9568-5c68b7e40134")
 		)
 		(instances
 			(project ""
@@ -3824,7 +3854,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "9fca82bf-481b-40ab-8000-1d25d5880391")
+			(uuid "9fca82bf-481b-40ab-8000-1d25d5880393")
 		)
 		(instances
 			(project ""
@@ -3889,10 +3919,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "08c3ad03-bf07-4212-9a10-db1b784a652e")
+			(uuid "08c3ad03-bf07-4212-9a10-db1b784a6530")
 		)
 		(pin "2"
-			(uuid "67181f33-c2e2-4850-9568-5c68b7e40133")
+			(uuid "67181f33-c2e2-4850-9568-5c68b7e40135")
 		)
 		(instances
 			(project ""
@@ -3958,7 +3988,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "68c30465-550d-419a-a1a6-32f5275a4e9f")
+			(uuid "68c30465-550d-419a-a1a6-32f5275a4ea1")
 		)
 		(instances
 			(project ""
@@ -4026,7 +4056,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "21896482-ec90-4b07-bc9d-4eec1a9490d1")
+			(uuid "21896482-ec90-4b07-bc9d-4eec1a9490d2")
 		)
 		(instances
 			(project ""
@@ -4092,7 +4122,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "68c30465-550d-419a-a1a6-32f5275a4e9f")
+			(uuid "68c30465-550d-419a-a1a6-32f5275a4ea2")
 		)
 		(instances
 			(project ""
@@ -4160,7 +4190,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "21896482-ec90-4b07-bc9d-4eec1a9490d1")
+			(uuid "21896482-ec90-4b07-bc9d-4eec1a9490d3")
 		)
 		(instances
 			(project ""
@@ -4226,7 +4256,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "68c30465-550d-419a-a1a6-32f5275a4e9f")
+			(uuid "68c30465-550d-419a-a1a6-32f5275a4ea3")
 		)
 		(instances
 			(project ""
@@ -4291,10 +4321,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "08c3ad03-bf07-4212-9a10-db1b784a652e")
+			(uuid "08c3ad03-bf07-4212-9a10-db1b784a6531")
 		)
 		(pin "2"
-			(uuid "67181f33-c2e2-4850-9568-5c68b7e40133")
+			(uuid "67181f33-c2e2-4850-9568-5c68b7e40136")
 		)
 		(instances
 			(project ""
@@ -4362,7 +4392,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "21896482-ec90-4b07-bc9d-4eec1a9490d1")
+			(uuid "21896482-ec90-4b07-bc9d-4eec1a9490d4")
 		)
 		(instances
 			(project ""
@@ -4607,10 +4637,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "08c3ad03-bf07-4212-9a10-db1b784a652e")
+			(uuid "08c3ad03-bf07-4212-9a10-db1b784a6532")
 		)
 		(pin "2"
-			(uuid "67181f33-c2e2-4850-9568-5c68b7e40133")
+			(uuid "67181f33-c2e2-4850-9568-5c68b7e40137")
 		)
 		(instances
 			(project ""
@@ -4675,10 +4705,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "08c3ad03-bf07-4212-9a10-db1b784a652e")
+			(uuid "08c3ad03-bf07-4212-9a10-db1b784a6533")
 		)
 		(pin "2"
-			(uuid "67181f33-c2e2-4850-9568-5c68b7e40133")
+			(uuid "67181f33-c2e2-4850-9568-5c68b7e40138")
 		)
 		(instances
 			(project ""
@@ -4743,15 +4773,81 @@
 			)
 		)
 		(pin "1"
-			(uuid "08c3ad03-bf07-4212-9a10-db1b784a652e")
+			(uuid "08c3ad03-bf07-4212-9a10-db1b784a6534")
 		)
 		(pin "2"
-			(uuid "67181f33-c2e2-4850-9568-5c68b7e40133")
+			(uuid "67181f33-c2e2-4850-9568-5c68b7e40139")
 		)
 		(instances
 			(project ""
 				(path "/19e0d388-4d21-4b36-b74d-b28bef7280ef"
 					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 68.58 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e0998282-9b86-4475-83a8-a6ba7bec294b")
+		(property "Reference" "#PWR09"
+			(at 68.58 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 68.58 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 68.58 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 68.58 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ef672058-f538-4627-b337-6e0aa44a5853")
+		)
+		(instances
+			(project ""
+				(path "/19e0d388-4d21-4b36-b74d-b28bef7280ef"
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -4811,10 +4907,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "08c3ad03-bf07-4212-9a10-db1b784a652e")
+			(uuid "08c3ad03-bf07-4212-9a10-db1b784a6535")
 		)
 		(pin "2"
-			(uuid "67181f33-c2e2-4850-9568-5c68b7e40133")
+			(uuid "67181f33-c2e2-4850-9568-5c68b7e4013a")
 		)
 		(instances
 			(project ""
