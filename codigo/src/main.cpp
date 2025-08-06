@@ -9,12 +9,9 @@
 #define DELAY 1
 
 void setbit(bool value) {
-  digitalWrite(RCLK, LOW); // clock
-  delay(DELAY);
+  digitalWrite(RCLK, LOW);               // clock
   digitalWrite(SER, value ? HIGH : LOW); // data
-  delay(DELAY);
-  digitalWrite(RCLK, HIGH); // clock
-  delay(DELAY);
+  digitalWrite(RCLK, HIGH);              // clock
 }
 
 void selectDigit(byte digit) {
@@ -32,7 +29,7 @@ void setbyte(bool values[8]) {
 
 void show() {
   digitalWrite(LATCH, HIGH);
-  delay(DELAY);
+  delay(DELAY); // not needed but good for managing the button
   digitalWrite(LATCH, LOW);
 }
 
@@ -154,7 +151,7 @@ void loop() {
   // delay(1000); // Wait for 1000 millisecond(s)
 
   // escribir digito
-  digitTo7Segment(7, false, dato);
+  digitTo7Segment(3, false, dato);
   display_digit(3, dato);
 
   // delay(1000); // Wait for 1000 millisecond(s)
