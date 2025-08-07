@@ -2,6 +2,8 @@
 
 #define BITS_TO_WRITE 8 + 4
 
+// segments   ----------.gfedcba
+// digitn n   ------4321--------  <- digits are active-low, so negate unwanted
 #define SEG_A 0b0000000000000001
 #define SEG_B 0b0000000000000010
 #define SEG_C 0b0000000000000100
