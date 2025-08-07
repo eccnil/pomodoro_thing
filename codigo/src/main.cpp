@@ -3,10 +3,6 @@
 #include <segments.hpp>
 #include <util/delay.h>
 
-#define SER 1
-#define RCLK 2
-#define MR 3
-#define LATCH 7
 #define DELAY 1
 
 void setbit(bool value) {
@@ -34,7 +30,7 @@ void display_bits(int bits) {
 
 int num = 0;
 bool buttonPressed = false;
-int pinButton = 0;
+int pinButton = 3; // pa3 physical 10
 
 void checkForButtonPress() {
   auto read = digitalRead(pinButton);
