@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <avr/io.h>
+#include <segments.hpp>
 #include <util/delay.h>
 
 #define SER 1
@@ -14,16 +15,9 @@ void setbit(bool value) {
   digitalWrite(RCLK, HIGH);              // clock
 }
 
-void selectDigit(byte digit) {
-  for (byte i = 4; i; i--) {
-    setbit(!(i == digit));
-  }
-}
-
-void setbyte(bool values[8]) {
-  for (int i = 8; i; i--) {
-    bool value = values[i - 1];
-    setbit(value);
+void setbits(int bits) {
+  for (int i = BITS_TO_WRITE - 1; i >= 0; i--) {
+    setbit((bits >> i) & 1);
   }
 }
 
@@ -33,92 +27,9 @@ void show() {
   digitalWrite(LATCH, LOW);
 }
 
-void display_digit(byte digit, bool values[8]) {
-  selectDigit(digit);
-  setbyte(values);
+void display_bits(int bits) {
+  setbits(bits);
   show();
-}
-
-// Function to convert a digit (0-9) into a boolean array (7 segments + DP)
-// Returns: segmentArray[8] = {a, b, c, d, e, f, g, dp}
-void digitTo7Segment(uint8_t digit, bool includeDot, bool segmentArray[8]) {
-  // Default: all segments OFF
-  for (int i = 0; i < 8; i++) {
-    segmentArray[i] = false;
-  }
-
-  // Define segment patterns for digits 0-9 (a, b, c, d, e, f, g)
-  switch (digit) {
-  case 0:
-    segmentArray[0] = true; // a
-    segmentArray[1] = true; // b
-    segmentArray[2] = true; // c
-    segmentArray[3] = true; // d
-    segmentArray[4] = true; // e
-    segmentArray[5] = true; // f
-    break;
-  case 1:
-    segmentArray[1] = true; // b
-    segmentArray[2] = true; // c
-    break;
-  case 2:
-    segmentArray[0] = true; // a
-    segmentArray[1] = true; // b
-    segmentArray[3] = true; // d
-    segmentArray[4] = true; // e
-    segmentArray[6] = true; // g
-    break;
-  case 3:
-    segmentArray[0] = true; // a
-    segmentArray[1] = true; // b
-    segmentArray[2] = true; // c
-    segmentArray[3] = true; // d
-    segmentArray[6] = true; // g
-    break;
-  case 4:
-    segmentArray[1] = true; // b
-    segmentArray[2] = true; // c
-    segmentArray[5] = true; // f
-    segmentArray[6] = true; // g
-    break;
-  case 5:
-    segmentArray[0] = true; // a
-    segmentArray[2] = true; // c
-    segmentArray[3] = true; // d
-    segmentArray[5] = true; // f
-    segmentArray[6] = true; // g
-    break;
-  case 6:
-    segmentArray[0] = true; // a
-    segmentArray[2] = true; // c
-    segmentArray[3] = true; // d
-    segmentArray[4] = true; // e
-    segmentArray[5] = true; // f
-    segmentArray[6] = true; // g
-    break;
-  case 7:
-    segmentArray[0] = true; // a
-    segmentArray[1] = true; // b
-    segmentArray[2] = true; // c
-    break;
-  case 8:
-    for (int i = 0; i < 7; i++)
-      segmentArray[i] = true; // All segments ON
-    break;
-  case 9:
-    segmentArray[0] = true; // a
-    segmentArray[1] = true; // b
-    segmentArray[2] = true; // c
-    segmentArray[3] = true; // d
-    segmentArray[5] = true; // f
-    segmentArray[6] = true; // g
-    break;
-  default: // Invalid digit → turn OFF all segments (except DP if enabled)
-    break;
-  }
-
-  // Set the decimal point (DP)
-  segmentArray[7] = includeDot;
 }
 
 int num = 0;
@@ -152,29 +63,57 @@ void setup() {
   delay(200);
 }
 
+int num2bits4display(char num) {
+  int bits = SDIG_BLANK;
+  switch (num) {
+  case 0:
+    bits = SDIG_0;
+    break;
+  case 1:
+    bits = SDIG_1;
+    break;
+  case 2:
+    bits = SDIG_2;
+    break;
+  case 3:
+    bits = SDIG_3;
+    break;
+  case 4:
+    bits = SDIG_4;
+    break;
+  case 5:
+    bits = SDIG_5;
+    break;
+  case 6:
+    bits = SDIG_6;
+    break;
+  case 7:
+    bits = SDIG_7;
+    break;
+  case 8:
+    bits = SDIG_8;
+    break;
+  case 9:
+    bits = SDIG_9;
+    break;
+  }
+  return bits;
+}
+
 void loop() {
-  bool dato[8];
 
   // escribir digito
-  digitTo7Segment(8, false, dato);
-  display_digit(1, dato);
-
-  // delay(1000); // Wait for 1000 millisecond(s)
+  display_bits(compose_digit(SDIG_8, false, DIG_1));
 
   // escribir digito
-  digitTo7Segment(10, true, dato);
-  display_digit(2, dato);
-
-  // delay(1000); // Wait for 1000 millisecond(s)
+  display_bits(compose_digit(SDIG_BLANK, true, DIG_2));
 
   // escribir digito
-  digitTo7Segment(7, false, dato);
-  display_digit(3, dato);
+  display_bits(compose_digit(SDIG_0, false, DIG_3));
 
-  // delay(1000); // Wait for 1000 millisecond(s)
   // escribir digito
-  digitTo7Segment(num, false, dato);
-  display_digit(4, dato);
+  int bits = num2bits4display(num % 10);
+  display_bits(compose_digit(bits, buttonPressed, DIG_4));
 
   // delay(1000); // Wait for 1000 millisecond(s)
   checkForButtonPress();
