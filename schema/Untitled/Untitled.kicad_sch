@@ -2957,7 +2957,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 90.17) (xy 78.74 90.17)
+			(xy 71.12 72.39) (xy 78.74 72.39)
 		)
 		(stroke
 			(width 0)
@@ -2984,16 +2984,6 @@
 			(type default)
 		)
 		(uuid "0e89d8da-3b08-41f4-8733-88864474f3f0")
-	)
-	(wire
-		(pts
-			(xy 81.28 74.93) (xy 71.12 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1203abfe-df71-4acc-a186-be6f28a94b77")
 	)
 	(wire
 		(pts
@@ -3047,7 +3037,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 100.33) (xy 80.01 100.33)
+			(xy 71.12 74.93) (xy 80.01 74.93)
 		)
 		(stroke
 			(width 0)
@@ -3117,7 +3107,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 97.79) (xy 80.01 97.79)
+			(xy 71.12 77.47) (xy 80.01 77.47)
 		)
 		(stroke
 			(width 0)
@@ -3137,7 +3127,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 80.01) (xy 80.01 80.01)
+			(xy 71.12 95.25) (xy 80.01 95.25)
 		)
 		(stroke
 			(width 0)
@@ -3217,6 +3207,16 @@
 	)
 	(wire
 		(pts
+			(xy 81.28 80.01) (xy 71.12 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ea15c4f-38c4-4cd9-9005-c780178c8fcc")
+	)
+	(wire
+		(pts
 			(xy 189.23 82.55) (xy 199.39 82.55)
 		)
 		(stroke
@@ -3274,6 +3274,16 @@
 			(type default)
 		)
 		(uuid "57d60676-5486-464d-91d6-1e048649b650")
+	)
+	(wire
+		(pts
+			(xy 90.17 90.17) (xy 90.17 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58879a05-0845-44b5-a7ed-80c810cd1fe6")
 	)
 	(bus
 		(pts
@@ -3477,13 +3487,13 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 59.69) (xy 81.28 74.93)
+			(xy 90.17 90.17) (xy 71.12 90.17)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "852f8bcc-f13a-478e-aa03-48214a271f81")
+		(uuid "87532449-a86f-4973-89c6-483fd37a6209")
 	)
 	(wire
 		(pts
@@ -3494,16 +3504,6 @@
 			(type default)
 		)
 		(uuid "89fee29b-0fd9-4aa5-bc23-7994c34c7a06")
-	)
-	(wire
-		(pts
-			(xy 71.12 95.25) (xy 90.17 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8c82e6c1-e4d1-4228-98a1-9e5dc2f35d48")
 	)
 	(wire
 		(pts
@@ -3785,6 +3785,16 @@
 		)
 		(uuid "e02748b1-bbaa-4864-8404-37d45ac48812")
 	)
+	(wire
+		(pts
+			(xy 81.28 59.69) (xy 81.28 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1f61ca6-6469-43d4-99a1-40edeb5e3a30")
+	)
 	(bus
 		(pts
 			(xy 170.18 90.17) (xy 170.18 92.71)
@@ -3844,16 +3854,6 @@
 			(type default)
 		)
 		(uuid "eca8e2f2-c295-4ad6-8e4a-0092aded8773")
-	)
-	(wire
-		(pts
-			(xy 90.17 95.25) (xy 90.17 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ed92905c-02a9-4177-837d-0a5d49d0c254")
 	)
 	(wire
 		(pts
@@ -4026,7 +4026,7 @@
 		(uuid "676d24ef-3d6d-4f1a-9d13-3b4eccf45bce")
 	)
 	(label "s_latch"
-		(at 72.39 80.01 0)
+		(at 72.39 95.25 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4116,7 +4116,7 @@
 		(uuid "a3e851e7-bed2-4bd2-979d-aa6206f9c162")
 	)
 	(label "s_clock"
-		(at 72.39 100.33 0)
+		(at 72.39 74.93 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4136,7 +4136,7 @@
 		(uuid "a882059b-9977-4c22-850c-aa92c0be0e1f")
 	)
 	(label "s_data"
-		(at 72.39 97.79 0)
+		(at 72.39 77.47 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4176,7 +4176,7 @@
 		(uuid "b43a85d0-b016-4360-8cfb-79e0fd47f4b6")
 	)
 	(label "s_clear"
-		(at 72.39 90.17 0)
+		(at 72.39 72.39 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5302,7 +5302,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_Push_1P1T_NO_CK_PTS125Sx43SMTR"
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_Omron_B3FS-101xP"
 			(at 73.66 119.38 0)
 			(effects
 				(font
@@ -6105,7 +6105,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.80mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
 			(at 60.6552 39.37 0)
 			(effects
 				(font
@@ -6622,7 +6622,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_Push_1P1T_NO_CK_PTS125Sx43SMTR"
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_Omron_B3FS-101xP"
 			(at 71.12 54.61 0)
 			(effects
 				(font
