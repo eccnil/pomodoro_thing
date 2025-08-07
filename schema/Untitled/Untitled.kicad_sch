@@ -5033,7 +5033,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_SMDSocket_SmallPads"
 			(at 55.88 87.63 0)
 			(effects
 				(font
@@ -6512,7 +6512,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-16_W7.62mm_LongPads"
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm_SMDSocket_SmallPads"
 			(at 116.84 139.7 0)
 			(effects
 				(font
@@ -7094,7 +7094,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-16_W7.62mm_LongPads"
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm_SMDSocket_SmallPads"
 			(at 116.84 92.71 0)
 			(effects
 				(font
