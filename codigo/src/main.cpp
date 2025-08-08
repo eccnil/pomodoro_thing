@@ -3,7 +3,15 @@
 #include <segments.hpp>
 #include <util/delay.h>
 
+// gpio PINs (using alternative order)
+#define SER 8   // PA2 physical 11
+#define RCLK 9  // PA1 physical 12
+#define MR 10   // PA0 physical 13
+#define LATCH 0 // PB0 physical 2
 #define DELAY 1
+int num = 0;
+bool buttonPressed = false;
+int pinButton = 7; // pa3 physical 10
 
 void setbit(bool value) {
   digitalWrite(RCLK, LOW);               // clock
@@ -27,10 +35,6 @@ void display_bits(int bits) {
   setbits(bits);
   show();
 }
-
-int num = 0;
-bool buttonPressed = false;
-int pinButton = 3; // pa3 physical 10
 
 void checkForButtonPress() {
   auto read = digitalRead(pinButton);

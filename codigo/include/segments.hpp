@@ -1,10 +1,5 @@
 #pragma once
 
-// gpio PINs
-#define SER 2    // PA2 physical 11
-#define RCLK 1   // PA1 physical 12
-#define MR 0     // PA0 physical 13
-#define LATCH 10 // PB0 physical 2
 
 // segments definitions
 #define BITS_TO_WRITE 8 + 4 + 3
