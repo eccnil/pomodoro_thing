@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <avr/io.h>
 #include <segments.hpp>
+#include <shift_register.hpp>
 #include <util/delay.h>
 
 // gpio PINs (using alternative order)
@@ -8,33 +9,13 @@
 #define RCLK 9  // PA1 physical 12
 #define MR 10   // PA0 physical 13
 #define LATCH 0 // PB0 physical 2
-#define DELAY 1
 int num = 0;
 bool buttonPressed = false;
 int pinButton = 7; // pa3 physical 10
 
-void setbit(bool value) {
-  digitalWrite(RCLK, LOW);               // clock
-  digitalWrite(SER, value ? HIGH : LOW); // data
-  digitalWrite(RCLK, HIGH);              // clock
-}
-
-void setbits(int bits) {
-  for (int i = BITS_TO_WRITE - 1; i >= 0; i--) {
-    setbit((bits >> i) & 1);
-  }
-}
-
-void show() {
-  digitalWrite(LATCH, HIGH);
-  delay(DELAY); // not needed but good for managing the button
-  digitalWrite(LATCH, LOW);
-}
-
-void display_bits(int bits) {
-  setbits(bits);
-  show();
-}
+shiftRegisterPins srPins = {
+    .latch = LATCH, .data = SER, .clock = RCLK, .clear = MR};
+ShiftRegister shift_register = ShiftRegister(srPins, BITS_TO_WRITE);
 
 void checkForButtonPress() {
   auto read = digitalRead(pinButton);
@@ -48,18 +29,10 @@ void checkForButtonPress() {
 }
 
 void setup() {
-  pinMode(SER, OUTPUT);
-  pinMode(RCLK, OUTPUT);
-  pinMode(MR, OUTPUT);
-  pinMode(LATCH, OUTPUT);
+  shift_register.init();
 
   pinMode(pinButton, INPUT_PULLUP); // Button pin
 
-  // inicio
-  digitalWrite(SER, LOW);
-  digitalWrite(RCLK, LOW);
-  digitalWrite(MR, HIGH);
-  digitalWrite(LATCH, LOW);
   delay(200);
 }
 
@@ -103,17 +76,17 @@ int num2bits4display(char num) {
 void loop() {
 
   // escribir digito
-  display_bits(compose_digit(SDIG_8, false, DIG_1));
+  shift_register.display_bits(compose_digit(SDIG_8, false, DIG_1));
 
   // escribir digito
-  display_bits(compose_digit(SDIG_BLANK, true, DIG_2));
+  shift_register.display_bits(compose_digit(SDIG_BLANK, true, DIG_2));
 
   // escribir digito
-  display_bits(compose_digit(SDIG_0, false, DIG_3));
+  shift_register.display_bits(compose_digit(SDIG_0, false, DIG_3));
 
   // escribir digito
   int bits = num2bits4display(num % 10);
-  display_bits(compose_digit(bits, buttonPressed, DIG_4));
+  shift_register.display_bits(compose_digit(bits, buttonPressed, DIG_4));
 
   // delay(1000); // Wait for 1000 millisecond(s)
   checkForButtonPress();

@@ -2,6 +2,6 @@
 
 class Device {
 public:
-  virtual void init();
-  virtual void poll();
+  virtual void init() {};
+  virtual void poll() {};
 };
