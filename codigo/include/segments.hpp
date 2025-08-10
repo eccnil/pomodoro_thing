@@ -87,8 +87,7 @@ public:
   /// stores the digit bits for a given position
   void set_digit_bits(int bits, int pos);
   void set_digit_number(int number, bool dot, int pos);
-  // TODO: setnumber
-  // void set_number(int number, int dot_pos = 0);
+  void set_number(int number, int dot_pos = 0);
 
   /** inits the shift register */
   void init() override;
@@ -149,5 +148,25 @@ inline void Segments::init() { sr.init(); }
 inline void Segments::poll() {
   for (int i = 0; i < NUM_DIGITS; i++) {
     sr.display_bits(current_bits[i]);
+  }
+}
+
+inline void Segments::set_number(int number, int dot_pos) {
+  if (number > 9999 || number < -999) {
+    // show error
+    // TODO: to its own method
+    set_digit_bits(s.a | s.d | s.e | s.g | s.f, 1);
+    set_digit_bits(s.e | s.g, 2);
+    set_digit_bits(s.e | s.g, 3);
+    set_digit_bits(0, 4);
+  } else {
+    set_digit_number(number % 10, dot_pos == 4, 4);
+    set_digit_number((number / 10) % 10, dot_pos == 3, 3);
+    set_digit_number((number / 100) % 10, dot_pos == 2, 2);
+    if (number < 0) {
+      set_digit_bits(dot_pos == 1 ? s.g | s.dot : s.g, 1);
+    } else {
+      set_digit_number((number / 1000) % 10, dot_pos == 1, 1);
+    }
   }
 }

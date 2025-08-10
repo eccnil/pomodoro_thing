@@ -36,17 +36,13 @@ void setup() {
   pinMode(pinButton, INPUT_PULLUP); // Button pin
 
   delay(200);
-
-  display.set_digit_number(9, false, 1);
-  display.set_digit_number(8, false, 2);
-  display.set_digit_number(7, false, 3);
+  num = 1;
 }
 
 void loop() {
 
-  display.set_digit_number(num % 10, buttonPressed, 4);
+  display.set_number(num, buttonPressed ? 4 : 0);
 
-  // delay(1000); // Wait for 1000 millisecond(s)
   checkForButtonPress();
   display.poll();
 }
