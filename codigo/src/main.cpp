@@ -17,6 +17,8 @@ shiftRegisterPins srPins = {
     .latch = LATCH, .data = SER, .clock = RCLK, .clear = MR};
 ShiftRegister shift_register = ShiftRegister(srPins, BITS_TO_WRITE);
 
+Segments display = Segments(shift_register);
+
 void checkForButtonPress() {
   auto read = digitalRead(pinButton);
   if (read == LOW && !buttonPressed) {
@@ -29,65 +31,22 @@ void checkForButtonPress() {
 }
 
 void setup() {
-  shift_register.init();
+  display.init();
 
   pinMode(pinButton, INPUT_PULLUP); // Button pin
 
   delay(200);
-}
 
-int num2bits4display(char num) {
-  int bits = SDIG_BLANK;
-  switch (num) {
-  case 0:
-    bits = SDIG_0;
-    break;
-  case 1:
-    bits = SDIG_1;
-    break;
-  case 2:
-    bits = SDIG_2;
-    break;
-  case 3:
-    bits = SDIG_3;
-    break;
-  case 4:
-    bits = SDIG_4;
-    break;
-  case 5:
-    bits = SDIG_5;
-    break;
-  case 6:
-    bits = SDIG_6;
-    break;
-  case 7:
-    bits = SDIG_7;
-    break;
-  case 8:
-    bits = SDIG_8;
-    break;
-  case 9:
-    bits = SDIG_9;
-    break;
-  }
-  return bits;
+  display.set_digit_number(9, false, 1);
+  display.set_digit_number(8, false, 2);
+  display.set_digit_number(7, false, 3);
 }
 
 void loop() {
 
-  // escribir digito
-  shift_register.display_bits(compose_digit(SDIG_8, false, DIG_1));
-
-  // escribir digito
-  shift_register.display_bits(compose_digit(SDIG_BLANK, true, DIG_2));
-
-  // escribir digito
-  shift_register.display_bits(compose_digit(SDIG_0, false, DIG_3));
-
-  // escribir digito
-  int bits = num2bits4display(num % 10);
-  shift_register.display_bits(compose_digit(bits, buttonPressed, DIG_4));
+  display.set_digit_number(num % 10, buttonPressed, 4);
 
   // delay(1000); // Wait for 1000 millisecond(s)
   checkForButtonPress();
+  display.poll();
 }
