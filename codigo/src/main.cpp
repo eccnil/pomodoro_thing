@@ -14,23 +14,28 @@
 
 #define BUTTON_A 7 // PA3 physical 10
 #define BUTTON_B 3 // PA7 Physical 6
-int num = 0;
 
+// global variables
+int num = 0; // number to be displayed
+void increment_num() { num++; }
+void decrement_num() { num--; }
+
+// shiftRegiseter that drives the display inputs
 shiftRegisterPins srPins = {
     .latch = LATCH, .data = SER, .clock = RCLK, .clear = MR};
 ShiftRegister shift_register = ShiftRegister(srPins, BITS_TO_WRITE);
 
+// display (4digits x 7 sgements + dot)
+Segments display = Segments(shift_register);
+
+// press button_a (right one)
 Button button_a = Button(BUTTON_A);
 
+// press button_a (left one)
 Button button_b = Button(BUTTON_B);
-
-Segments display = Segments(shift_register);
 
 #define DEVICE_QUANTITY 3
 Device *devices[DEVICE_QUANTITY] = {&display, &button_a, &button_b};
-
-void increment_num() { num++; }
-void decrement_num() { num--; }
 
 void setup() {
   for (int i = 0; i < DEVICE_QUANTITY; i++) {
