@@ -160,10 +160,14 @@ inline void Segments::set_number(int number, int dot_pos) {
     set_digit_bits(s.e | s.g, 3);
     set_digit_bits(0, 4);
   } else {
+    bool negative = number < 0;
+    if (negative) {
+      number *= -1;
+    }
     set_digit_number(number % 10, dot_pos == 4, 4);
     set_digit_number((number / 10) % 10, dot_pos == 3, 3);
     set_digit_number((number / 100) % 10, dot_pos == 2, 2);
-    if (number < 0) {
+    if (negative) {
       set_digit_bits(dot_pos == 1 ? s.g | s.dot : s.g, 1);
     } else {
       set_digit_number((number / 1000) % 10, dot_pos == 1, 1);
