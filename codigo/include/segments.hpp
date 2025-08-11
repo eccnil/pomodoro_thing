@@ -88,6 +88,7 @@ public:
   void set_digit_bits(int bits, int pos);
   void set_digit_number(int number, bool dot, int pos);
   void set_number(int number, int dot_pos = 0);
+  void show_err();
 
   /** inits the shift register */
   void init() override;
@@ -153,12 +154,7 @@ inline void Segments::poll() {
 
 inline void Segments::set_number(int number, int dot_pos) {
   if (number > 9999 || number < -999) {
-    // show error
-    // TODO: to its own method
-    set_digit_bits(s.a | s.d | s.e | s.g | s.f, 1);
-    set_digit_bits(s.e | s.g, 2);
-    set_digit_bits(s.e | s.g, 3);
-    set_digit_bits(0, 4);
+    show_err();
   } else {
     bool negative = number < 0;
     if (negative) {
@@ -173,4 +169,11 @@ inline void Segments::set_number(int number, int dot_pos) {
       set_digit_number((number / 1000) % 10, dot_pos == 1, 1);
     }
   }
+}
+
+inline void Segments::show_err() {
+  set_digit_bits(s.a | s.d | s.e | s.g | s.f, 1);
+  set_digit_bits(s.e | s.g, 2);
+  set_digit_bits(s.e | s.g, 3);
+  set_digit_bits(0, 4);
 }
