@@ -30,19 +30,22 @@ void checkForButtonPress() {
   }
 }
 
+#define DEVICE_QUANTITY 1
+Device *devices[DEVICE_QUANTITY] = {&display};
+
 void setup() {
-  display.init();
-
+  for (int i = 0; i < DEVICE_QUANTITY; i++) {
+    devices[i]->init();
+  }
   pinMode(pinButton, INPUT_PULLUP); // Button pin
-
-  delay(200);
-  num = 1;
 }
 
 void loop() {
+  for (int i = 0; i < DEVICE_QUANTITY; i++) {
+    devices[i]->poll();
+  }
 
   display.set_number(num, buttonPressed ? 4 : 0);
 
   checkForButtonPress();
-  display.poll();
 }
