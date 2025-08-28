@@ -7,8 +7,8 @@ info:
 unit_test: test/test_pomodoro/a.out
 	./test/test_pomodoro/a.out
 
-test/test_pomodoro/a.out: test/test_pomodoro/test_main.cpp src/pomodoro.cpp
-	g++ -o test/test_pomodoro/a.out test/test_pomodoro/test_main.cpp
+test/test_pomodoro/a.out: test/test_pomodoro/test_main.cpp src/pomodoro.cpp include/pomodoro.hpp
+	g++ test/test_pomodoro/test_main.cpp -I include -o test/test_pomodoro/a.out 
 
 fuses:
 	pio run --target fuses
