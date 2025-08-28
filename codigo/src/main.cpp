@@ -1,4 +1,5 @@
 #include "button.hpp"
+#include "pomodoro.cpp"
 #include <Arduino.h>
 #include <avr/io.h>
 #include <button.hpp>
