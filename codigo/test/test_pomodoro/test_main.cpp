@@ -1,3 +1,4 @@
+#include "pomodoro.hpp"
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "../../src/pomodoro.cpp"
 #include "doctest.h"
@@ -40,10 +41,14 @@ TEST_CASE("Timer") {
     }
   }
   SUBCASE("time reach limit while running") {
-    t += 25 * 60 * 1000 + 10;
+    t += 25 * 60 * 1000l + 10;
     sut.poll(t);
     CHECK(sut.status() == Pomodoro::Status::RING);
     CHECK(sut.display().num == 0000);
+    SUBCASE("buttonA resetes") {
+      sut.buttonA();
+      CHECK(sut.status() == Pomodoro::Status::IDLE);
+    }
   }
 }
 

@@ -114,6 +114,9 @@ void Pomodoro::buttonA() {
   case SET_U:
     setup_inc_unit_mins();
     break;
+  case RING:
+    reset();
+    break;
   }
 }
 
