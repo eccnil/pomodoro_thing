@@ -5,3 +5,5 @@ schema/Untitled/~Untitled.kicad_pcb.lck
 case/counter_case.FCStd1
 schema/Untitled/~Untitled.kicad_sch.lck
 codigo/test/test_pomodoro/a.out
+codigo/test/test_unit/a.out
+codigo/test/test_unit/pomodoro.h
