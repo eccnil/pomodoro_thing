@@ -1,7 +1,9 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "../../src/pomodoro.cpp"
+#include "../../src/tempo.cpp"
 #include "doctest.h"
 #include "pomodoro.hpp"
+#include "tempo.hpp"
 
 TEST_SUITE_BEGIN("Pomodoro");
 
@@ -157,5 +159,68 @@ TEST_CASE("Dots") {
 TEST_SUITE_END();
 
 TEST_SUITE("Tempo") {
-  TEST_CASE("Setting tempo") {}
+  TEST_CASE("Timing 60") {
+    Tempo sut;
+    auto d = sut.show(0l);
+    REQUIRE(d.bpm == 60);
+    REQUIRE(d.phase == 0);
+    SUBCASE("still 0 phase") {
+      auto d0 = sut.show((1000 / 8) - 1);
+      REQUIRE(d0.phase == 0);
+    }
+    SUBCASE("changes to 1st phase") {
+      auto d1 = sut.show((1000 / 8));
+      REQUIRE(d1.phase == 1);
+    }
+    SUBCASE("changes to 7th phase") {
+      auto d1 = sut.show((7 * 1000 / 8));
+      REQUIRE(d1.phase == 7);
+    }
+    SUBCASE("changes to 8th phase") {
+      auto d1 = sut.show((8 * 1000 / 8));
+      REQUIRE(d1.phase == 0);
+      SUBCASE("inc during 8th phase maintains phase") {
+        sut.dec_tempo();
+        auto d = sut.show((8 * 1000 / 8));
+        CHECK(d.phase == 0);
+        CHECK(d.bpm == 58);
+      }
+    }
+  }
+
+  TEST_CASE("Setting tempo (fixed time)") {
+    long time = 7l * 1000l / 8l;
+    Tempo sut;
+    REQUIRE(sut.show(time).bpm == 60);
+    auto phase_at_time = sut.show(time).phase;
+    REQUIRE(phase_at_time >= 0);
+    REQUIRE(phase_at_time < 8);
+
+    SUBCASE("Lowering to minimum") {
+      for (int i = 0; i < 30; i++)
+        sut.dec_tempo();
+      auto d = sut.show(time);
+      CHECK(d.bpm == 40);
+      CHECK(d.phase == phase_at_time);
+    }
+    SUBCASE("Raising to top") {
+      for (int i = 0; i < 200; i++)
+        sut.inc_tempo();
+      auto d = sut.show(time);
+      CHECK(d.bpm == 180);
+      CHECK(d.phase == phase_at_time);
+    }
+    SUBCASE("inc tempo") {
+      sut.inc_tempo();
+      auto d = sut.show(time);
+      CHECK(d.bpm == 62);
+      CHECK(d.phase == phase_at_time);
+    }
+    SUBCASE("dec tempo") {
+      sut.dec_tempo();
+      auto d = sut.show(time);
+      CHECK(d.bpm == 58);
+      CHECK(d.phase == phase_at_time);
+    }
+  }
 }
