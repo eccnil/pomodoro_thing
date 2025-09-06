@@ -85,17 +85,21 @@ void Pomodoro::poll(long milis) {
 
   // trigger things
   switch (activity_status) {
+  case IDLE:
+  case SET_D:
+  case SET_U:
+  case RING:
+    break;
+
   case PAUSED:
     extend_time_counting_to(time_diff);
     break;
 
   case RUNNING:
     bool reached_end_time = milis >= time_counting_to;
-    if (reached_end_time)
+    if (reached_end_time) {
       ring();
-    break;
-
-  default:
+    }
     break;
   }
 }
