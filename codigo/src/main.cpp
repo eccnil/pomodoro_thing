@@ -1,4 +1,5 @@
 #include "button.hpp"
+#include "pomodoro.hpp"
 #include <Arduino.h>
 #include <avr/io.h>
 #include <button.hpp>
@@ -31,28 +32,39 @@ Segments display = Segments(shift_register);
 
 // press button_a (right one)
 Button button_a = Button(BUTTON_A);
-void b_a() { strategy->button_a_tap(); }
+void b_a() {
+  if (strategy != NULL)
+    strategy->button_a_tap();
+}
 
 // press button_a (left one)
 Button button_b = Button(BUTTON_B);
-void b_b() { strategy->button_b_tap(); }
+void b_b() {
+  if (strategy != NULL)
+    strategy->button_b_tap();
+}
 
 #define DEVICE_QUANTITY 3
 Device *devices[DEVICE_QUANTITY] = {&display, &button_a, &button_b};
 
 // strategies
-Strategy counter = CounterStrategy(display, button_a, button_b);
-Strategy pomodoro = PomodoroStrategy(display);
+CounterStrategy counter(display, button_a, button_b);
+PomodoroStrategy pomodoro(display);
 
 void setup() {
   for (int i = 0; i < DEVICE_QUANTITY; i++) {
     devices[i]->init();
   }
 
-  strategy = button_b.is_pressed() ? &counter : &pomodoro;
+  button_b.poll();
+  if (button_b.is_pressed()) {
+    strategy = (Strategy *)&counter;
+  } else {
+    strategy = (Strategy *)&pomodoro;
+  }
 
-  button_a.set_on_tap(b_a);
   button_b.set_on_tap(b_b);
+  button_a.set_on_tap(b_a);
 }
 
 void loop() {
