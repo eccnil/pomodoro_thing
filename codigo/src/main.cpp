@@ -1,9 +1,8 @@
-#include "button.hpp"
 #include <Arduino.h>
 #include <avr/io.h>
-#include <button.hpp>
-#include <segments.hpp>
-#include <shift_register.hpp>
+#include <devices/button.hpp>
+#include <devices/segments.hpp>
+#include <devices/shift_register.hpp>
 #include <strategies/conter_strategy.hpp>
 #include <strategies/pomodoro_strategy.hpp>
 #include <strategy.hpp>
@@ -47,8 +46,8 @@ void b_b() {
 Device *devices[DEVICE_QUANTITY] = {&display, &button_a, &button_b};
 
 // strategies
-CounterStrategy counter(display, button_a, button_b);
-PomodoroStrategy pomodoro(display);
+CounterStrategy counter(button_a, button_b);
+PomodoroStrategy pomodoro = PomodoroStrategy();
 
 void setup() {
   for (int i = 0; i < DEVICE_QUANTITY; i++) {
@@ -71,5 +70,5 @@ void loop() {
     devices[i]->poll();
   };
 
-  strategy->poll();
+  strategy->display(display);
 }

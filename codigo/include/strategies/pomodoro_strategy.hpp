@@ -1,13 +1,12 @@
 
 #pragma once
+#include <devices/segments.hpp>
 #include <pomodoro.hpp>
-#include <segments.hpp>
 #include <strategy.hpp>
 
 class PomodoroStrategy : public Strategy {
   Pomodoro pomodoro;
-  Segments &display;
-  void display_pomodoro() {
+  void display_pomodoro(Segments &display) {
     Pomodoro::PomodoroDisplay pd = pomodoro.display();
 
     if (pd.num > 9999 || pd.num < 0) {
@@ -21,11 +20,11 @@ class PomodoroStrategy : public Strategy {
   }
 
 public:
-  PomodoroStrategy(Segments &s) : pomodoro(), display(s) {}
+  PomodoroStrategy() : pomodoro() {}
   void button_a_tap() override { pomodoro.buttonA(); }
   void button_b_tap() override { pomodoro.buttonB(); }
-  void poll() override {
+  void display(Segments &display) override {
     pomodoro.poll(millis());
-    display_pomodoro();
+    display_pomodoro(display);
   }
 };

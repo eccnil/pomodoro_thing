@@ -1,7 +1,7 @@
 #pragma once
 
 #include <device.h>
-#include <shift_register.hpp>
+#include <devices/shift_register.hpp>
 
 // segments definitions
 #define BITS_TO_WRITE 8 + 4 + 3

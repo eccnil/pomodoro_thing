@@ -1,4 +1,4 @@
-#include <segments.hpp>
+#include <devices/segments.hpp>
 
 int compose_digit(int num, bool dot, int pos) {
   if (dot) {

@@ -94,6 +94,9 @@ void Pomodoro::poll(long milis) {
     if (reached_end_time)
       ring();
     break;
+
+  default:
+    break;
   }
 }
 
@@ -133,6 +136,8 @@ void Pomodoro::buttonB() {
     break;
   case PAUSED:
     reset();
+    break;
+  default:
     break;
   }
 }
