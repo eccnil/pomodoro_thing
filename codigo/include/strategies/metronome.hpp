@@ -16,7 +16,7 @@ public:
   void button_b_tap() override { tempo.dec_tempo(); };
 };
 
-void Metronome::display(Segments &display) {
+inline void Metronome::display(Segments &display) {
   auto info = tempo.show(millis());
   int display_bits[4] = {0, 0, 0, 0};
   display_tempo(&*display_bits, info.bpm, display);
@@ -26,7 +26,7 @@ void Metronome::display(Segments &display) {
   }
 }
 
-void Metronome::display_tempo(int *bits, int tempo, Segments &display) {
+inline void Metronome::display_tempo(int *bits, int tempo, Segments &display) {
   int units, decs, cents;
   units = tempo % 10;
   decs = (tempo / 10) % 10;
@@ -37,7 +37,7 @@ void Metronome::display_tempo(int *bits, int tempo, Segments &display) {
   bits[0] |= cents == 1 ? display.get_digit_bits(1) : 0;
 }
 
-void Metronome::display_phase(int *bits, int phase) {
+inline void Metronome::display_phase(int *bits, int phase) {
   switch (phase) {
   case 0:
     bits[0] |= SEG_F;
