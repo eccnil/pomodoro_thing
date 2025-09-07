@@ -89,6 +89,8 @@ public:
   void set_digit_number(int number, bool dot, int pos);
   void set_number(int number, int dot_pos = 0);
   void show_err();
+  /// get bits
+  int get_digit_bits(int i);
 
   /** inits the shift register */
   void init() override;
@@ -108,6 +110,14 @@ inline void Segments::init_number_segments() {
   numberSegments[7] = s.a | s.b | s.c;
   numberSegments[8] = s.a | s.b | s.c | s.d | s.e | s.g | s.f;
   numberSegments[9] = s.a | s.b | s.c | s.g | s.f;
+}
+
+inline int Segments::get_digit_bits(int n) {
+  if (n < 0 || n > 9) {
+    return 0;
+  } else {
+    return numberSegments[n];
+  }
 }
 
 inline Segments::Segments(ShiftRegister &sreg, segment_bits sb, digit_bits db)
