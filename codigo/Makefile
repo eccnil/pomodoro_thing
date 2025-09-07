@@ -3,6 +3,7 @@ info:
 	@echo "unit_test  -> pruebas unitarias en desktop"
 	@echo "fuses      -> burn fuses on chip"
 	@echo "run        -> pio run"
+	@echo "count      -> count lines"
 	
 unit_test: test/test_unit/a.out
 	./test/test_unit/a.out
@@ -15,4 +16,7 @@ fuses:
 
 run: unit_test
 	pio run
+
+count: 
+	tokei . --exclude test/test_unit/doctest.h
 
