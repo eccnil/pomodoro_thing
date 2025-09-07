@@ -4,6 +4,7 @@
 #include <devices/segments.hpp>
 #include <devices/shift_register.hpp>
 #include <strategies/conter_strategy.hpp>
+#include <strategies/metronome.hpp>
 #include <strategies/pomodoro_strategy.hpp>
 #include <strategy.hpp>
 #include <util/delay.h>
@@ -45,30 +46,39 @@ void b_b() {
 #define DEVICE_QUANTITY 3
 Device *devices[DEVICE_QUANTITY] = {&display, &button_a, &button_b};
 
-// strategies
+// strategies (functionality)
 CounterStrategy counter(button_a, button_b);
 PomodoroStrategy pomodoro = PomodoroStrategy();
+Metronome metronome;
 
 void setup() {
+  // init devices
   for (int i = 0; i < DEVICE_QUANTITY; i++) {
     devices[i]->init();
   }
 
+  // check buttons to decide the functionality to be loaded
+  button_a.poll();
   button_b.poll();
   if (button_b.is_pressed()) {
     strategy = (Strategy *)&counter;
+  } else if (button_a.is_pressed()) {
+    strategy = (Strategy *)&metronome;
   } else {
     strategy = (Strategy *)&pomodoro;
   }
 
+  // set buttons actions to the selected functionality
   button_b.set_on_tap(b_b);
   button_a.set_on_tap(b_a);
 }
 
 void loop() {
+  // update all devices
   for (int i = 0; i < DEVICE_QUANTITY; i++) {
     devices[i]->poll();
   };
 
+  // update strategy
   strategy->display(display);
 }
