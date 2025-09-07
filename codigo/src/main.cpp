@@ -46,11 +46,6 @@ void b_b() {
 #define DEVICE_QUANTITY 3
 Device *devices[DEVICE_QUANTITY] = {&display, &button_a, &button_b};
 
-// strategies (functionality)
-CounterStrategy counter(button_a, button_b);
-PomodoroStrategy pomodoro = PomodoroStrategy();
-Metronome metronome;
-
 void setup() {
   // init devices
   for (int i = 0; i < DEVICE_QUANTITY; i++) {
@@ -61,11 +56,11 @@ void setup() {
   button_a.poll();
   button_b.poll();
   if (button_b.is_pressed()) {
-    strategy = (Strategy *)&counter;
+    strategy = (Strategy *)new CounterStrategy(button_a, button_b);
   } else if (button_a.is_pressed()) {
-    strategy = (Strategy *)&metronome;
+    strategy = (Strategy *)new Metronome();
   } else {
-    strategy = (Strategy *)&pomodoro;
+    strategy = (Strategy *)new PomodoroStrategy();
   }
 
   // set buttons actions to the selected functionality
