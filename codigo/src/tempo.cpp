@@ -33,4 +33,4 @@ unsigned int Tempo::phase(long t) {
 }
 
 long Tempo::period_milis() { return (60 * 1000l) / bpm; }
-long Tempo::period_8th_milis() { return period_milis() / 8; }
+long Tempo::period_8th_milis() { return (2l * period_milis()) / 8l; }

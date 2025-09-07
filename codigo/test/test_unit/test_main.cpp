@@ -166,23 +166,23 @@ TEST_SUITE("Tempo") {
     REQUIRE(d.phase == 0);
 
     SUBCASE("still 0 phase") {
-      auto d0 = sut.show((1000 / 8) - 1);
+      auto d0 = sut.show((2000 / 8) - 1);
       CHECK(d0.phase == 0);
     }
     SUBCASE("changes to 1st phase") {
-      auto d1 = sut.show((1000 / 8));
+      auto d1 = sut.show((2000 / 8));
       CHECK(d1.phase == 1);
     }
     SUBCASE("changes to 7th phase") {
-      auto d1 = sut.show((7 * 1000 / 8));
+      auto d1 = sut.show((7 * 2000 / 8));
       CHECK(d1.phase == 7);
     }
     SUBCASE("changes to 8th phase") {
-      auto d1 = sut.show((8 * 1000 / 8));
+      auto d1 = sut.show((8 * 2000 / 8));
       CHECK(d1.phase == 0);
       SUBCASE("inc during 8th phase maintains phase") {
         sut.dec_tempo();
-        auto d = sut.show((8 * 1000 / 8));
+        auto d = sut.show((8 * 2000 / 8));
         CHECK(d.phase == 0);
         CHECK(d.bpm == 58);
       }

@@ -61,5 +61,3 @@ void Metronome::display_phase(int *bits, int phase) {
     break;
   }
 }
-
-// FIXME: el metronomo va el doble de rápido
