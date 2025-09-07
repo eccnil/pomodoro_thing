@@ -164,21 +164,22 @@ TEST_SUITE("Tempo") {
     auto d = sut.show(0l);
     REQUIRE(d.bpm == 60);
     REQUIRE(d.phase == 0);
+
     SUBCASE("still 0 phase") {
       auto d0 = sut.show((1000 / 8) - 1);
-      REQUIRE(d0.phase == 0);
+      CHECK(d0.phase == 0);
     }
     SUBCASE("changes to 1st phase") {
       auto d1 = sut.show((1000 / 8));
-      REQUIRE(d1.phase == 1);
+      CHECK(d1.phase == 1);
     }
     SUBCASE("changes to 7th phase") {
       auto d1 = sut.show((7 * 1000 / 8));
-      REQUIRE(d1.phase == 7);
+      CHECK(d1.phase == 7);
     }
     SUBCASE("changes to 8th phase") {
       auto d1 = sut.show((8 * 1000 / 8));
-      REQUIRE(d1.phase == 0);
+      CHECK(d1.phase == 0);
       SUBCASE("inc during 8th phase maintains phase") {
         sut.dec_tempo();
         auto d = sut.show((8 * 1000 / 8));
@@ -189,7 +190,7 @@ TEST_SUITE("Tempo") {
   }
 
   TEST_CASE("Setting tempo (fixed time)") {
-    long time = 7l * 1000l / 8l;
+    long time = 80l * 1000l / 8l;
     Tempo sut;
     REQUIRE(sut.show(time).bpm == 60);
     auto phase_at_time = sut.show(time).phase;

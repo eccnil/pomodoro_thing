@@ -1,9 +1,9 @@
 #include <tempo.hpp>
 
-int Tempo::inc = 2;
-int Tempo::min_tempo = 40;
-int Tempo::max_tempo = 180;
-int Tempo::default_tempo = 60;
+unsigned int Tempo::inc = 2;
+unsigned int Tempo::min_tempo = 40;
+unsigned int Tempo::max_tempo = 180;
+unsigned int Tempo::default_tempo = 60;
 
 Tempo::Display Tempo::show(long t) {
   current_time = t;
@@ -26,7 +26,7 @@ void Tempo::adjust_tempo(int delta) {
   offset += (current_phase - new_phase);
 }
 
-int Tempo::phase(long t) {
+unsigned int Tempo::phase(long t) {
   auto total_periods = t / period_8th_milis();
   auto adjusted_periods = total_periods + offset;
   return adjusted_periods % 8;
