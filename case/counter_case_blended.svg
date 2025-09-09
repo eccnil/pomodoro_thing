@@ -27,9 +27,9 @@
      inkscape:cx="160.20994"
      inkscape:cy="612.7738"
      inkscape:window-width="1312"
-     inkscape:window-height="749"
-     inkscape:window-x="173"
-     inkscape:window-y="284"
+     inkscape:window-height="721"
+     inkscape:window-x="662"
+     inkscape:window-y="253"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
@@ -38,200 +38,6 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <g
-       id="g1"
-       transform="matrix(0,1,1,0,268.0436,-245.39106)">
-      <g
-         id="Part__Part2DObjectPython"
-         transform="matrix(1,0,0,-1,284.77708,-94.57588)">
-        <path
-           id="Part__Part2DObjectPython_w0000"
-           d="m 72.199115,27.6 v 1.099557 h -1 v -0.6 H 70.099557 V 27 h 0.4 V 0 h -58.8 v 27 h 0.4 v 1.099557 H 11 v 0.6 H 10 V 27.6 20.6 H 1 v 7 1.099557 H 0 V 130.49956 h 1 v 1.09955 7 h 9 v -7 -1.09955 h 1 v 0.6 h 1.099557 v 1.09955 h -0.4 v 11 h 58.8 v -11 h -0.4 v -1.09955 h 1.099558 v -0.6 h 1 v 1.09955 7 h 9 v -7 -1.09955 h 1 V 28.699557 h -1 V 27.6 v -7 h -9 v 7"
-           stroke="#000080"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none" />
-        <title
-           id="title1">b'Part__Part2DObjectPython'</title>
-      </g>
-      <g
-         id="Part__Part2DObjectPython001"
-         transform="matrix(1,0,0,-1,284.77708,-94.57588)">
-        <path
-           id="Part__Part2DObjectPython001_w0000"
-           d="M 11.549779,131.09956 V 28.099557"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0001"
-           d="m 70.099557,131.64934 h -58"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0002"
-           d="m 12.099557,27.549779 h 58"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0003"
-           d="M 70.649336,28.099557 V 131.09956"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0004"
-           d="M 10,131.04934 H 1"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0005"
-           d="m 1,28.149779 h 9"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0006"
-           d="m 81.199115,131.04934 h -9"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0007"
-           d="m 72.199115,28.149779 h 9"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <title
-           id="title2">b'Part__Part2DObjectPython001'</title>
-      </g>
-      <g
-         id="Part__Part2DObjectPython002"
-         transform="matrix(1,0,0,-1,284.77708,-94.57588)">
-        <path
-           id="Part__Part2DObjectPython002_w0000"
-           d="M 67.071323,49.144525 H 15.127791 v 20.75808 h 51.943532 v -20.75808"
-           stroke="#ff5733"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none" />
-        <path
-           id="Part__Part2DObjectPython002_w0001"
-           d="M 50.894532,127.06034 V 97.863162 h 15.642586 v 29.197178 m 0,0 h -0.8 V 98.663162 H 51.694532 v 28.397178 m 0,0 h -0.8"
-           stroke="#ff5733"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none" />
-        <path
-           id="Part__Part2DObjectPython002_w0002"
-           d="M 30.504582,127.06034 V 98.663162 H 16.461996 v 28.397178 m 0,0 h -0.8 V 97.863162 h 15.642586 v 29.197178 m 0,0 h -0.8"
-           stroke="#ff5733"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none" />
-        <path
-           id="Part__Part2DObjectPython002_w0003"
-           d="m 46.886705,26.174452 v -9 h 15 v 9 h -15"
-           stroke="#ff5733"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none" />
-        <title
-           id="title3">b'Part__Part2DObjectPython002'</title>
-      </g>
-    </g>
-    <g
-       id="g2"
-       transform="translate(36.041937,158.31041)">
-      <g
-         id="Part__Part2DObjectPython-3"
-         transform="matrix(1,0,0,-1,1.278472,115.17759)">
-        <path
-           id="Part__Part2DObjectPython_w0000-9"
-           d="m 91.219644,86.899115 v -1.099558 h -0.733038 -15.47001 -0.733038 v 1.099558 3 1.099557 14.999998 h -7.738241 v -14.999998 -1.099557 -1 h -0.8 v 11 h -44.2 v -11 h -0.8 v 1 1.099557 4 h -7.2 v -4 -1.099557 -3 -1.099558 H 12.445759 0 v -57.7 h 12.445759 1.099558 V 27 v -3 -1.099557 -4 h 7.2 v 4 V 24 25 h 0.8 V 14 h 44.2 v 11 h 0.8 V 24 22.900443 7.9004426 h 7.738241 V 22.900443 24 v 3 1.099557 h 0.733038 15.47001 0.733038 V 27 L 83.136741,13 V 0 h 40.010619 v 27 1.099557 h 1.09956 3.60023 v 57.7 h -3.60023 -1.09956 v 1.099558 26.999995 H 83.136741 v -13 l 8.082903,-13.999995"
-           stroke="#000080"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none" />
-        <title
-           id="title1-0">b'Part__Part2DObjectPython'</title>
-      </g>
-      <g
-         id="Part__Part2DObjectPython001-5"
-         transform="matrix(1,0,0,-1,1.278472,115.17759)">
-        <path
-           id="Part__Part2DObjectPython001_w0000-2"
-           d="m 74.650077,28.099557 v 57.7"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0001-2"
-           d="m 12.995538,85.799557 v -57.7"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0002-7"
-           d="M 13.545317,27.549779 H 74.283558"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0003-3"
-           d="M 74.283558,86.349336 H 13.545317"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0004-7"
-           d="m 90.853125,28.099557 v 57.7"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0005-9"
-           d="m 66.545317,23.450221 h 7.738241"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0006-0"
-           d="m 13.545317,23.450221 h 7.2"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0007-2"
-           d="M 74.283558,90.448894 H 66.545317"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0008"
-           d="m 20.745317,90.448894 h -7.2"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0009"
-           d="m 123.69714,28.099557 v 57.7"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0010"
-           d="M 91.219644,27.549779 H 123.14736"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <path
-           id="Part__Part2DObjectPython001_w0011"
-           d="M 123.14736,86.349336 H 91.219644"
-           stroke="#c00000"
-           stroke-width="0.7 px"
-           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
-        <title
-           id="title2-3">b'Part__Part2DObjectPython001'</title>
-      </g>
-    </g>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -265,5 +71,223 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="17.945658"
          y="24.133814">espejado (pegar por dentro)</tspan></text>
+    <g
+       id="g3"
+       transform="matrix(0,1,1,0,-27.255529,217.85078)">
+      <g
+         id="Part__Part2DObjectPython-2"
+         transform="matrix(1,0,0,-1,-183.00625,199.47616)">
+        <path
+           id="Part__Part2DObjectPython_w0000-1"
+           d="m 74.269911,27.1 v 1.884956 h -1 v -0.6 H 71.384956 V 26.5 h 0.9 V 0 h -60.8 v 26.5 h 0.9 v 1.884956 H 10.5 v 0.6 h -1 V 27.1 20.1 H 1 v 7 1.884956 H 0 V 129.78496 h 1 v 1.88495 7 h 8.5 v -7 -1.88495 h 1 v 0.6 h 1.884956 v 1.88495 h -0.9 v 10.5 h 60.8 v -10.5 h -0.9 v -1.88495 h 1.884955 v -0.6 h 1 v 1.88495 7 h 8.5 v -7 -1.88495 h 1 V 28.984956 h -1 V 27.1 v -7 h -8.5 v 7"
+           stroke="#000080"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none" />
+        <title
+           id="title1-1">b'Part__Part2DObjectPython'</title>
+      </g>
+      <g
+         id="Part__Part2DObjectPython001-0"
+         transform="matrix(1,0,0,-1,-183.00625,199.47616)">
+        <path
+           id="Part__Part2DObjectPython001_w0000-1"
+           d="M 11.442478,130.38496 V 28.384956"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0001-8"
+           d="m 71.384956,131.32743 h -59"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0002-76"
+           d="m 12.384956,27.442478 h 59"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0003-0"
+           d="M 72.327433,28.384956 V 130.38496"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0004-0"
+           d="M 9.5,130.72743 H 1"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0005-95"
+           d="M 1,28.042478 H 9.5"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0006-6"
+           d="m 82.769911,130.72743 h -8.5"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0007-28"
+           d="m 74.269911,28.042478 h 8.5"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <title
+           id="title2-5">b'Part__Part2DObjectPython001'</title>
+      </g>
+      <g
+         id="Part__Part2DObjectPython002-9"
+         transform="matrix(1,0,0,-1,-183.00625,199.47616)">
+        <path
+           id="Part__Part2DObjectPython002_w0000-4"
+           d="M 67.856722,48.929924 H 15.91319 v 20.75808 h 51.943532 v -20.75808"
+           stroke="#ff5733"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none" />
+        <path
+           id="Part__Part2DObjectPython002_w0001-3"
+           d="M 51.679931,126.84574 V 97.648561 h 15.642586 v 29.197179 m 0,0 h -0.8 V 98.448561 H 52.479931 v 28.397179 m 0,0 h -0.8"
+           stroke="#ff5733"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none" />
+        <path
+           id="Part__Part2DObjectPython002_w0002-9"
+           d="M 31.289981,126.84574 V 98.448561 H 17.247395 v 28.397179 m 0,0 h -0.8 V 97.648561 h 15.642586 v 29.197179 m 0,0 h -0.8"
+           stroke="#ff5733"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none" />
+        <path
+           id="Part__Part2DObjectPython002_w0003-0"
+           d="m 47.672104,26.174452 v -9 h 15 v 9 h -15"
+           stroke="#ff5733"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none" />
+        <title
+           id="title3-5">b'Part__Part2DObjectPython002'</title>
+      </g>
+    </g>
+    <g
+       id="g4"
+       transform="translate(253.71447,52.599341)">
+      <g
+         id="Part__Part2DObjectPython"
+         transform="matrix(1,0,0,-1,-220.3125,225.797)">
+        <path
+           id="Part__Part2DObjectPython_w0000"
+           d="m 69.511579,0 v 6 h 4.955468 0.106807 9 0.106807 1 v 0.8 h -1 V 13 l 7.505554,13 v 1.884956 H 89.929578 75.036918 73.780281 V 26 24 22.115044 7.1150444 H 66.830715 V 22.115044 24 25 h -0.8 V 14 h -44.2 v 11 h -0.8 v -1 -1.884956 -5 h -7.2 v 5 V 24 26 27.884956 H 11.945759 0 v 56.7 h 11.945759 1.884956 v 1.884955 2 1.884956 5 h 7.2 v -5 -1.884956 -1 h 0.8 v 11 h 44.2 v -11 h 0.8 v 1 1.884956 15.000003 h 6.949566 v -15.000003 -1.884956 -2 -1.884955 h 1.256637 14.89266 1.256637 v 1.884955 l -7.505554,13 v 6.199999 h 1 v 0.8 h -1 -0.106807 -9 -0.106807 -4.955468 v 6 h 4.955468 0.106807 9 0.106807 38.644599 V 86.469911 84.584956 h 1.88495 3.10024 v -56.7 h -3.10024 -1.88495 V 26 0 h -38.644599 -0.106807 -9 -0.106807 -4.955468"
+           stroke="#000080"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none" />
+        <title
+           id="title1">b'Part__Part2DObjectPython'</title>
+      </g>
+      <g
+         id="Part__Part2DObjectPython001"
+         transform="matrix(1,0,0,-1,-220.3125,225.797)">
+        <path
+           id="Part__Part2DObjectPython001_w0000"
+           d="M 13.830715,26.942478 H 73.780281"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0001"
+           d="m 74.4086,27.884956 v 56.7"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0002"
+           d="m 12.888237,84.584956 v -56.7"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0003"
+           d="M 73.780281,85.527433 H 13.830715"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0004"
+           d="m 66.830715,23.057522 h 6.949566"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0005"
+           d="m 13.830715,23.057522 h 7.2"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0006"
+           d="m 90.557896,27.884956 v 56.7"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0007"
+           d="M 73.780281,89.412389 H 66.830715"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0008-8"
+           d="m 21.030715,89.412389 h -7.2"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0009-4"
+           d="m 123.26773,27.884956 v 56.7"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0010-0"
+           d="M 122.32526,85.527433 H 91.186215"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0011-4"
+           d="M 91.186215,26.942478 H 122.32526"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0012"
+           d="m 83.627258,112.46991 v -6"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0013"
+           d="M 83.627258,6 V 0"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0014"
+           d="m 74.52045,112.46991 v -6"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <path
+           id="Part__Part2DObjectPython001_w0015"
+           d="M 74.52045,6 V 0"
+           stroke="#c00000"
+           stroke-width="0.7 px"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.7;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.09, 0.05, 0.02, 0.05" />
+        <title
+           id="title2">b'Part__Part2DObjectPython001'</title>
+      </g>
+    </g>
   </g>
 </svg>
